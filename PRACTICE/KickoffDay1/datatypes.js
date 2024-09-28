@@ -54,4 +54,8 @@ console.log(typeof empty);
 console.log(empty);
 
 
-
+//array
+let arr = ['xxx', 'yyyy', 'zz']
+console.log(arr);
+arr.push('nnn')
+console.log(arr);
