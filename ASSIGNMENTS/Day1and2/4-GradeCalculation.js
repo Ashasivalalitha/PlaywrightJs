@@ -1,6 +1,11 @@
-let score = 180
+let score = 18
 
 function getGrade(score){
+
+    if (score > 100 || score < 0) {
+        console.log(score + " - Invalid score");
+        return; // Stop the function if the score is invalid
+    }
     let grade
         if ((score>=90)&&(score<=100))
             grade = 1
@@ -10,21 +15,21 @@ function getGrade(score){
             grade = 3
         else if ((score>=0)&&(score<40))
             grade = 4
-        else
-            console.log(score + " - Invalid score");
+        // else
+        //     console.log(score + " - Invalid score");
             
 
     switch (grade) {
-        case grade=1:
+        case 1:
             console.log(score + " is Grade 1");
             break;
-        case grade=2:
+        case 2:
             console.log(score + " is Grade 2");
             break;
-        case grade=3:
+        case 3:
             console.log(score + " is Grade 3");
             break;
-        case grade=4:
+        case 4:
             console.log(score + " is Grade 4");
             break;
         default:
