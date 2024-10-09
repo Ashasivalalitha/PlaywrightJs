@@ -9,11 +9,3 @@ for(let i=0; i<=(twoSumNumbers.length-1); i++)
             else
             continue;
     }
-
-
-// twoSumNumbers.forEach((firstEach) => {
-
-// for()
-
-
-// })
