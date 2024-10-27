@@ -12,11 +12,11 @@ test(`Test to create a Account`, async ({ page }) => {
 
 
 await page.frameLocator("//iframe[@src='default.xhtml']").locator("(//button[text()='Click Me'])[1]").click()
-console.log(expect(await page.frameLocator("//iframe[@src='default.xhtml']").locator("(//button[@onclick])[1]")).toHaveText("Hurray! You Clicked Me."));
+expect(await page.frameLocator("//iframe[@src='default.xhtml']").locator("(//button[@onclick])[1]")).toHaveText("Hurray! You Clicked Me.")
 
 
 await page.frameLocator("//iframe[@src='page.xhtml']").frameLocator("//iframe[@src='framebutton.xhtml']").locator("(//button[text()='Click Me'])[1]").click()
-console.log(expect(await page.frameLocator("//iframe[@src='page.xhtml']").frameLocator("//iframe[@src='framebutton.xhtml']").locator("(//button[@onclick])[1]")).toHaveText("Hurray! You Clicked Me."));
+expect(await page.frameLocator("//iframe[@src='page.xhtml']").frameLocator("//iframe[@src='framebutton.xhtml']").locator("(//button[@onclick])[1]")).toHaveText("Hurray! You Clicked Me.")
 
 
 })

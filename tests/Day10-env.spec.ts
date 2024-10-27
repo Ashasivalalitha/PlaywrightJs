@@ -12,8 +12,8 @@ dotenv.config({path:envPath})
 
 test(`Test environment`, async({page})=>{
 
-    const usertest= process.env.username as string
-    const passtest= process.env.password as string
+    const usertest= process.env.SFusername as string
+    const passtest= process.env.SFpassword as string
     await page.goto("https://login.salesforce.com/")
     //Enter username
     await page.fill("//input[@name='username']", usertest );
