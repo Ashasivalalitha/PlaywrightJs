@@ -1,8 +1,9 @@
 import { test, expect } from "@playwright/test";
 
 test(`Test frames`, async ({ page }) => {
-    page.setDefaultNavigationTimeout(60000)
-    page.setDefaultTimeout(60000)
+    test.setTimeout(60000)
+    //page.setDefaultNavigationTimeout(60000)
+    //page.setDefaultTimeout(60000)
 
     // await page.route("**", route => {
     //     const url = route.request().url();
